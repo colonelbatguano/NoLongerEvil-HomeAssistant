@@ -6,7 +6,7 @@
 [![Home Assistant Add-on](https://img.shields.io/badge/Home%20Assistant-Add--on-blue.svg)](https://www.home-assistant.io/addons/)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Us-5865F2?logo=discord&logoColor=white)](https://discord.gg/hackhouse)
 
-A Home Assistant add-on that provides self-hosted Nest thermostat control via the NoLongerEvil API. Control your Nest thermostats locally without relying on external cloud services.
+A Home Assistant Add-on that provides self-hosted Nest thermostat control via the NoLongerEvil API. Control your Nest thermostats locally without relying on external cloud services.
 
 ## Installation
 
@@ -16,11 +16,13 @@ A Home Assistant add-on that provides self-hosted Nest thermostat control via th
 
    [![Add Repository](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fcodykociemba%2FNoLongerEvil-HomeAssistant)
 
-2. Find **NoLongerEvil HomeAssistant** in the add-on store and click **Install**
+2. Find **NoLongerEvil HomeAssistant** in the Add-on store and click **Install**
 
-3. Configure the add-on (see [Configuration](#configuration) below)
+3. Configure the Add-on (see [Configuration](#configuration) below)
 
-4. Start the add-on
+4. Start the Add-on
+5. Select "Watchdog" to restart the server if it crashes
+6. (Optional) Select "Add to sidebar" for ease of use during thermostat configuration
 
 ### Manual Installation
 
@@ -44,7 +46,7 @@ A Home Assistant add-on that provides self-hosted Nest thermostat control via th
 
 ## Configuration
 
-After installing the add-on, configure it through the Home Assistant UI:
+After installing the add-on, configure it on the "Configuration" tab via the Home Assistant UI:
 
 | Option | Required | Default | Description |
 |--------|----------|---------|-------------|
@@ -53,8 +55,10 @@ After installing the add-on, configure it through the Home Assistant UI:
 | `debug_logging` | No | `false` | Enable verbose logging for troubleshooting |
 | `mqtt_host` | No | (auto-detected) | MQTT broker hostname (leave empty to use Mosquitto add-on) |
 | `mqtt_port` | No | `1883` | MQTT broker port |
-| `mqtt_user` | No | (empty) | MQTT username for authentication |
-| `mqtt_password` | No | (empty) | MQTT password for authentication |
+| `mqtt_user` | No | (empty*) | MQTT username for authentication |
+| `mqtt_password` | No | (empty*) | MQTT password for authentication |
+
+* Fields can be empty under HAOS. Enter your credentials if you're using an external MQTT broker. 
 
 ### Example Configuration
 
