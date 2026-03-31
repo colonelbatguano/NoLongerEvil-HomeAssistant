@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## [0.2.0] - Mar 31, 2026
+## [0.0.8] - Mar 31, 2026
 
 ### Network Scanner and Device Credentials
 
@@ -17,7 +17,7 @@ Added local network scanning to discover and configure Nest devices from the das
 
 ---
 
-## [0.1.0] - Dec 11, 2025
+## [0.0.7] - Dec 11, 2025
 
 ### Frontend Consolidation
 
